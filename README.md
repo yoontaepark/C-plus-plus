@@ -1,1 +1,1 @@
-# NYU
+# Lecture notes for NYU classes
