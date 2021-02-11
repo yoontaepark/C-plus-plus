@@ -20,7 +20,7 @@ int main()
 	cout << "Please enter the length of the call in minutes: ";
 	cin >> length_min;
 
-	if ((day_of_week == "Sa") && (day_of_week == "Su"))
+	if ((day_of_week == "Sa") || (day_of_week == "Su"))
 	{
 		cost_of_call = 0.15 * length_min;
 		cout << "The cost of the call is " << cost_of_call << endl;
