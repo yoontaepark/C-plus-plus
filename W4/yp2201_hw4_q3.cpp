@@ -3,27 +3,40 @@
 using namespace std;
 
 
-
-void decToBin(int n) 
-{
-	if (n == 0) 
-	{
-		return;
-	}
-	decToBin(n / 2);
-	cout << n % 2;
-}
-
 int main()
 {
 	int n;
-	
+	int checkBinary;
+
 	cout << "Enter decimal number:" << endl;
 	cin >> n;
 
 	cout << "The binary representation of " << n << " is ";
-	decToBin(n);
-	cout << endl;
+
+	int count = 0;
+
+	checkBinary = n;
+	while (checkBinary > 1)
+	{
+		checkBinary = checkBinary / 2;
+		count++;
+	}
+	
+	while (count >= 0)
+	{
+		if (n >= (pow(2, count)))
+		{
+			n = n - (pow(2, count));
+			cout << '1';
+			count--;
+		}
+		else
+		{
+			cout << '0';
+			count--;
+		}
+	}
+	
 
 	return 0;
-} 
+}
